@@ -1,0 +1,36 @@
+name: preprocessing-workflow
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  preprocessing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas numpy scikit-learn
+
+      - name: Run preprocessing script
+        run: |
+          cd preprocessing
+          python automate_aren.py
+
+      - name: Upload preprocessing artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: spotify_preprocessed
+          path: |
+            preprocessing/spotify_preprocessed_train.csv
+            preprocessing/spotify_preprocessed_test.csv
