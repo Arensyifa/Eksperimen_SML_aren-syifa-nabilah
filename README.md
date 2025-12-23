@@ -16,7 +16,7 @@ Repository ini berisi eksperimen preprocessing dan persiapan data untuk proyek m
 Dataset ini berisi informasi lagu-lagu yang paling sering diputar di Spotify beserta karakteristik audio dan performa chart-nya.
 
 ### Sumber Dataset:  
-[Spotify Most Streamed Songs – Kaggle]([https://www.kaggle.com/](https://www.kaggle.com/datasets/abdulszz/spotify-most-streamed-songs))
+[Spotify Most Streamed Songs – Kaggle](https://www.kaggle.com/datasets/abdulszz/spotify-most-streamed-songs)
 
 ---
 
